@@ -7,9 +7,15 @@ const PORT = 3000;
 
 const dbPath = './db/users.js';
 
+
+app.use(express.json());
+app.use(express.urlencoded({extended:true}));
+
 function validateEmail(email){
     return /^[^\s@]+@[6\s@]+\.[^\s@]+$/.test(email);
 }
+
+
 
 
 function load(){
